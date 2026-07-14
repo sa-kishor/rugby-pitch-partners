@@ -658,23 +658,8 @@ function Testimonials() {
           ))}
         </div>
 
-        {/* Sponsor placeholders */}
-        <div className="mt-14 rounded-2xl border border-dashed border-border bg-surface-muted p-8">
-          <div className="text-center text-xs font-semibold uppercase tracking-[0.18em] text-muted-foreground">
-            Ils soutiennent le club
-          </div>
-          <div className="mt-6 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-6">
-            {Array.from({ length: 6 }).map((_, i) => (
-              <div
-                key={i}
-                aria-label={`Emplacement logo partenaire ${i + 1}`}
-                className="flex h-20 items-center justify-center rounded-lg border border-border bg-background text-xs font-medium text-muted-foreground"
-              >
-                Logo partenaire
-              </div>
-            ))}
-          </div>
-        </div>
+        <TrustedPartners />
+
       </div>
     </section>
   );
