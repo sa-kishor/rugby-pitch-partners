@@ -143,6 +143,7 @@ function PartnersPage() {
         <StatsBand />
         <Benefits />
         <Showcase />
+        <GirlsTeam />
         <Tiers />
         <Testimonials />
         <ContactCTA />
