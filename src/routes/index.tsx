@@ -440,6 +440,80 @@ function Showcase() {
   );
 }
 
+/* ---------------- Girls Team ---------------- */
+
+function GirlsTeam() {
+  return (
+    <section className="bg-surface-muted py-20 sm:py-24 lg:py-28">
+      <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-12 px-4 sm:px-6 lg:grid-cols-2 lg:gap-16 lg:px-8">
+        <div className="order-2 lg:order-1">
+          <span className="text-xs font-bold uppercase tracking-[0.18em] text-primary">
+            Rugby au féminin
+          </span>
+          <h2 className="mt-3 text-3xl font-extrabold tracking-tight sm:text-4xl">
+            Une section féminine en pleine essor.
+          </h2>
+          <p className="mt-5 text-base leading-relaxed text-muted-foreground">
+            Le Rugby Club Montreuillois investit dans le développement du rugby
+            féminin à tous les âges. De l'école de rugby aux équipes seniors,
+            nous offrons un environnement d'entraînement structuré, encadré par
+            des éducatrices diplômées et porté par des valeurs de respect et
+            d'engagement.
+          </p>
+
+          <ul className="mt-8 space-y-4">
+            {[
+              "Équipes filles, junior et senior",
+              "Entraînements adaptés à chaque niveau",
+              "Ambiance solidaire et bienveillante",
+              "Compétitions régionales et tournois",
+            ].map((item) => (
+              <li key={item} className="flex items-start gap-3">
+                <span className="mt-0.5 flex h-6 w-6 flex-none items-center justify-center rounded-full bg-primary text-primary-foreground">
+                  <Check className="h-3.5 w-3.5" strokeWidth={3} />
+                </span>
+                <span className="text-sm font-medium text-foreground">{item}</span>
+              </li>
+            ))}
+          </ul>
+
+          <a
+            href="#contact"
+            className="mt-9 inline-flex items-center gap-2 rounded-md bg-primary px-6 py-3.5 text-sm font-semibold text-primary-foreground shadow-card transition-all hover:bg-rugby-red-dark focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+          >
+            Soutenir la section féminine
+            <ArrowRight className="h-4 w-4" aria-hidden="true" />
+          </a>
+        </div>
+
+        <div className="relative order-1 lg:order-2">
+          <div className="overflow-hidden rounded-2xl border border-border shadow-elevated">
+            <img
+              src={girlsTeamImg}
+              alt="Joueuses du Rugby Club Montreuillois en action sur le terrain"
+              width={1920}
+              height={1080}
+              loading="lazy"
+              className="h-full w-full object-cover"
+            />
+          </div>
+          <div className="absolute -bottom-6 -left-6 hidden max-w-xs rounded-2xl border border-border bg-card p-5 shadow-elevated sm:block">
+            <div className="flex items-center gap-3">
+              <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-primary text-primary-foreground">
+                <Users className="h-5 w-5" />
+              </div>
+              <div>
+                <div className="text-sm font-bold">+30 % de licenciées</div>
+                <div className="text-xs text-muted-foreground">Ces trois dernières saisons</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 /* ---------------- Tiers ---------------- */
 
 function Tiers() {
