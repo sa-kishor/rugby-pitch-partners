@@ -25,6 +25,85 @@ import {
 import heroImg from "@/assets/rugby-hero.jpg";
 import teamImg from "@/assets/rugby-team.jpg";
 import girlsTeamImg from "@/assets/rugby-girls-team.jpg";
+import sgLogo from "@/assets/partners/societe-generale.asset.json";
+import intersportLogo from "@/assets/partners/intersport.asset.json";
+import jamespotLogo from "@/assets/partners/jamespot.asset.json";
+import clubeeeLogo from "@/assets/partners/clubeee.asset.json";
+import laFleurLogo from "@/assets/partners/la-fleur.asset.json";
+import boogieLogo from "@/assets/partners/boogie.asset.json";
+import onairLogo from "@/assets/partners/onair.asset.json";
+
+const PARTNERS = [
+  { name: "Société Générale", logo: sgLogo.url },
+  { name: "Intersport", logo: intersportLogo.url },
+  { name: "Jamespot", logo: jamespotLogo.url },
+  { name: "Clubeeee", logo: clubeeeLogo.url },
+  { name: "La Fleur Boulangerie", logo: laFleurLogo.url },
+  { name: "Boogie Unlimited", logo: boogieLogo.url },
+  { name: "On Air Fitness Montreuil", logo: onairLogo.url },
+];
+
+function TrustedPartners() {
+  return (
+    <div className="mt-16">
+      <div className="mx-auto max-w-3xl text-center">
+        <span className="text-xs font-bold uppercase tracking-[0.18em] text-primary">
+          Nos partenaires
+        </span>
+        <h3 className="mt-3 text-3xl font-extrabold tracking-tight sm:text-4xl">
+          Our Trusted Partners
+        </h3>
+        <p className="mt-4 text-base leading-relaxed text-muted-foreground">
+          Rugby Club Montreuillois is proud to collaborate with companies and
+          organisations that actively support local sport, youth development
+          and community engagement.
+        </p>
+      </div>
+
+      <ul
+        role="list"
+        className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4"
+      >
+        {PARTNERS.map((p) => (
+          <li key={p.name}>
+            <div className="group flex h-40 items-center justify-center rounded-2xl border border-border bg-white p-6 shadow-card transition-all duration-300 hover:-translate-y-1 hover:shadow-elevated">
+              <img
+                src={p.logo}
+                alt={`Logo ${p.name}`}
+                loading="lazy"
+                className="max-h-full max-w-full object-contain transition-transform duration-300 group-hover:scale-105"
+              />
+            </div>
+          </li>
+        ))}
+      </ul>
+
+      <div className="mt-14 rounded-2xl border border-border bg-surface-muted p-8 text-center sm:p-10">
+        <p className="mx-auto max-w-2xl text-base leading-relaxed text-foreground sm:text-lg">
+          Join a growing network of businesses committed to supporting rugby
+          and the local community.
+        </p>
+        <div className="mt-6 flex flex-wrap items-center justify-center gap-3">
+          <a
+            href="#contact"
+            className="inline-flex items-center justify-center gap-2 rounded-lg bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground shadow-card transition-all hover:-translate-y-0.5 hover:shadow-elevated"
+          >
+            Become Our Next Partner <ArrowRight className="h-4 w-4" />
+          </a>
+          <a
+            href="https://rugbyclubmontreuillois.clubeo.com/page/nos-partenaires.html"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center justify-center gap-2 rounded-lg border border-border bg-background px-6 py-3 text-sm font-semibold text-foreground transition-all hover:bg-accent hover:text-accent-foreground"
+          >
+            View All Partners
+          </a>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 
 export const Route = createFileRoute("/")({
   component: PartnersPage,
@@ -658,23 +737,8 @@ function Testimonials() {
           ))}
         </div>
 
-        {/* Sponsor placeholders */}
-        <div className="mt-14 rounded-2xl border border-dashed border-border bg-surface-muted p-8">
-          <div className="text-center text-xs font-semibold uppercase tracking-[0.18em] text-muted-foreground">
-            Ils soutiennent le club
-          </div>
-          <div className="mt-6 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-6">
-            {Array.from({ length: 6 }).map((_, i) => (
-              <div
-                key={i}
-                aria-label={`Emplacement logo partenaire ${i + 1}`}
-                className="flex h-20 items-center justify-center rounded-lg border border-border bg-background text-xs font-medium text-muted-foreground"
-              >
-                Logo partenaire
-              </div>
-            ))}
-          </div>
-        </div>
+        <TrustedPartners />
+
       </div>
     </section>
   );
