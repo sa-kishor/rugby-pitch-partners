@@ -24,6 +24,7 @@ import {
 } from "lucide-react";
 import heroImg from "@/assets/rugby-hero.jpg";
 import teamImg from "@/assets/rugby-team.jpg";
+import girlsTeamImg from "@/assets/rugby-girls-team.jpg";
 
 export const Route = createFileRoute("/")({
   component: PartnersPage,
