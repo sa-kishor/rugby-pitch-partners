@@ -25,22 +25,14 @@ import {
 import heroImg from "@/assets/rugby-hero.jpg";
 import teamImg from "@/assets/rugby-team.jpg";
 import girlsTeamImg from "@/assets/rugby-girls-team.jpg";
-import sgLogo from "@/assets/partners/societe-generale.jpg";
-import intersportLogo from "@/assets/partners/intersport.png";
-import jamespotLogo from "@/assets/partners/jamespot.png";
-import clubeeeLogo from "@/assets/partners/clubeee.png";
-import laFleurLogo from "@/assets/partners/la-fleur.jpg";
-import boogieLogo from "@/assets/partners/boogie.jpg";
-import onairLogo from "@/assets/partners/onair.jpg";
-
 const PARTNERS = [
-  { name: "Société Générale", logo: sgLogo },
-  { name: "Intersport", logo: intersportLogo },
-  { name: "Jamespot", logo: jamespotLogo },
-  { name: "Clubeeee", logo: clubeeeLogo },
-  { name: "La Fleur Boulangerie", logo: laFleurLogo },
-  { name: "Boogie Unlimited", logo: boogieLogo },
-  { name: "On Air Fitness Montreuil", logo: onairLogo },
+  { name: "Société Générale", logo: "/partners/societe-generale.jpg" },
+  { name: "Intersport", logo: "/partners/intersport.png" },
+  { name: "Jamespot", logo: "/partners/jamespot.png" },
+  { name: "Clubeeee", logo: "/partners/clubeee.png" },
+  { name: "La Fleur Boulangerie", logo: "/partners/la-fleur.jpg" },
+  { name: "Boogie Unlimited", logo: "/partners/boogie.jpg" },
+  { name: "On Air Fitness Montreuil", logo: "/partners/onair.jpg" },
 ];
 
 function TrustedPartners() {
