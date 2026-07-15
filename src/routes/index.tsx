@@ -25,22 +25,22 @@ import {
 import heroImg from "@/assets/rugby-hero.jpg";
 import teamImg from "@/assets/rugby-team.jpg";
 import girlsTeamImg from "@/assets/rugby-girls-team.jpg";
-import sgLogo from "@/assets/partners/societe-generale.asset.json";
-import intersportLogo from "@/assets/partners/intersport.asset.json";
-import jamespotLogo from "@/assets/partners/jamespot.asset.json";
-import clubeeeLogo from "@/assets/partners/clubeee.asset.json";
-import laFleurLogo from "@/assets/partners/la-fleur.asset.json";
-import boogieLogo from "@/assets/partners/boogie.asset.json";
-import onairLogo from "@/assets/partners/onair.asset.json";
+import sgLogo from "@/assets/partners/societe-generale.jpg";
+import intersportLogo from "@/assets/partners/intersport.png";
+import jamespotLogo from "@/assets/partners/jamespot.png";
+import clubeeeLogo from "@/assets/partners/clubeee.png";
+import laFleurLogo from "@/assets/partners/la-fleur.jpg";
+import boogieLogo from "@/assets/partners/boogie.jpg";
+import onairLogo from "@/assets/partners/onair.jpg";
 
 const PARTNERS = [
-  { name: "Société Générale", logo: sgLogo.url },
-  { name: "Intersport", logo: intersportLogo.url },
-  { name: "Jamespot", logo: jamespotLogo.url },
-  { name: "Clubeeee", logo: clubeeeLogo.url },
-  { name: "La Fleur Boulangerie", logo: laFleurLogo.url },
-  { name: "Boogie Unlimited", logo: boogieLogo.url },
-  { name: "On Air Fitness Montreuil", logo: onairLogo.url },
+  { name: "Société Générale", logo: sgLogo },
+  { name: "Intersport", logo: intersportLogo },
+  { name: "Jamespot", logo: jamespotLogo },
+  { name: "Clubeeee", logo: clubeeeLogo },
+  { name: "La Fleur Boulangerie", logo: laFleurLogo },
+  { name: "Boogie Unlimited", logo: boogieLogo },
+  { name: "On Air Fitness Montreuil", logo: onairLogo },
 ];
 
 function TrustedPartners() {
